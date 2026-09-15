@@ -26,6 +26,11 @@ export function TitleScreen({ couple, onPlay }) {
           <span style={{ width: `${love}%` }} />
         </div>
         <div className="menu-grid">
+          <button className="menu-card" onClick={() => onPlay('monthsary')}>
+            <span>📅</span>
+            <h3>Our Days</h3>
+            <p>Monthsaries, anniversary, and a live count of us.</p>
+          </button>
           <button className="menu-card" onClick={() => onPlay('garden')}>
             <span>🌻</span>
             <h3>Heart Garden</h3>

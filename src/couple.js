@@ -8,4 +8,5 @@ export const COUPLE = {
   youPhoto,
   herPhoto,
   togetherPhoto,
+  startedOn: '2026-06-15',
 }

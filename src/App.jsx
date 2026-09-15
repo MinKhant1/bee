@@ -7,6 +7,7 @@ import { TitleScreen } from './components/TitleScreen'
 import { BeeGame } from './components/BeeGame'
 import { MemoryGame } from './components/MemoryGame'
 import { Ending } from './components/Ending'
+import { Monthsary } from './components/Monthsary'
 
 export default function App() {
   const [progress, setProgress] = useState(loadProgress)
@@ -26,6 +27,9 @@ export default function App() {
       <FloatingHearts />
       {screen === 'title' && (
         <TitleScreen couple={couple} onPlay={setScreen} />
+      )}
+      {screen === 'monthsary' && (
+        <Monthsary couple={couple} onBack={() => setScreen('title')} />
       )}
       {screen === 'garden' && (
         <BeeGame

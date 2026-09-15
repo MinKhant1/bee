@@ -375,7 +375,7 @@ h1,
 
 @media (min-width: 640px) {
   .menu-grid {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -868,5 +868,198 @@ h1,
     cursor: auto;
     height: calc(100dvh - 16px);
     border-radius: 18px;
+  }
+}
+
+.celebrate-panel {
+  width: min(760px, 100%);
+}
+
+.celebrate-title {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+}
+
+.celebrate-hero {
+  display: flex;
+  justify-content: center;
+  margin: 8px 0 16px;
+}
+
+.celebrate-hero .photo-frame {
+  border: 6px solid #fff;
+  box-shadow: 0 14px 32px rgba(229, 107, 125, 0.28);
+}
+
+.celebrate-banner {
+  text-align: center;
+  font-family: Caveat, cursive;
+  font-size: 1.7rem;
+  color: var(--rose);
+  margin: 0 0 14px;
+}
+
+.together-line {
+  text-align: center;
+  font-family: Fraunces, serif;
+  font-size: clamp(1.2rem, 3vw, 1.7rem);
+  margin: 0 0 16px;
+}
+
+.count-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.count-stat {
+  background: #fff;
+  border-radius: 18px;
+  padding: 12px 6px;
+  text-align: center;
+  box-shadow: 0 8px 0 #ead2ad;
+}
+
+.count-stat strong {
+  display: block;
+  font-family: Fraunces, serif;
+  font-size: clamp(1.3rem, 4vw, 2rem);
+  line-height: 1;
+}
+
+.count-stat span {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.countdown-row {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: 1fr;
+  margin-bottom: 22px;
+}
+
+@media (min-width: 640px) {
+  .countdown-row {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.countdown-card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 16px 16px 14px;
+  box-shadow: 0 8px 0 #ead2ad;
+}
+
+.countdown-card.honey-card {
+  background: linear-gradient(180deg, #fff6e0, #ffe7b3);
+}
+
+.countdown-kicker {
+  margin: 0;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-soft);
+}
+
+.countdown-card h3 {
+  margin: 6px 0 4px;
+  font-family: Fraunces, serif;
+}
+
+.countdown-card p:last-child {
+  margin: 0;
+  font-weight: 800;
+  color: var(--rose);
+}
+
+.timeline-title {
+  font-family: Fraunces, serif;
+  text-align: center;
+  margin: 8px 0 14px;
+  font-size: 1.4rem;
+}
+
+.monthsary-timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 8px 8px;
+}
+
+.tl {
+  display: grid;
+  grid-template-columns: 18px 1fr;
+  gap: 12px;
+  align-items: start;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.tl:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: 8px;
+  top: 16px;
+  bottom: 0;
+  width: 2px;
+  background: #f0ddc0;
+}
+
+.tl-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f0ddc0;
+  border: 3px solid #fff;
+  box-shadow: 0 0 0 2px #ead2ad;
+  margin-top: 4px;
+}
+
+.tl.done .tl-dot {
+  background: var(--honey);
+  box-shadow: 0 0 0 2px var(--honey-deep);
+}
+
+.tl.today .tl-dot {
+  background: var(--rose);
+  box-shadow: 0 0 0 2px #c44c5f;
+}
+
+.tl strong {
+  display: block;
+  font-family: Fraunces, serif;
+}
+
+.tl em {
+  display: block;
+  font-style: normal;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.tl.today strong {
+  color: var(--rose);
+}
+
+.tl.soon {
+  opacity: 0.55;
+}
+
+@media (max-width: 700px) {
+  .count-grid {
+    gap: 6px;
+  }
+
+  .count-stat {
+    padding: 10px 4px;
+    box-shadow: 0 6px 0 #ead2ad;
   }
 }
