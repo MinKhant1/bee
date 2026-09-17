@@ -3,6 +3,7 @@ import './App.css'
 import { COUPLE } from './couple'
 import { loadProgress, saveProgress } from './storage'
 import { FloatingHearts } from './components/PhotoFrame'
+import { Gate, loadGate } from './components/Gate'
 import { TitleScreen } from './components/TitleScreen'
 import { BeeGame } from './components/BeeGame'
 import { MemoryGame } from './components/MemoryGame'
@@ -11,6 +12,7 @@ import { Monthsary } from './components/Monthsary'
 
 export default function App() {
   const [progress, setProgress] = useState(loadProgress)
+  const [admitted, setAdmitted] = useState(loadGate)
   const [screen, setScreen] = useState('title')
   const couple = { ...COUPLE, ...progress }
 
@@ -20,6 +22,16 @@ export default function App() {
   }
 
   const meadow = screen === 'garden' ? null : <div className="meadow-bg" />
+
+  if (!admitted) {
+    return (
+      <>
+        <div className="meadow-bg" />
+        <FloatingHearts />
+        <Gate couple={couple} onAdmit={() => setAdmitted(true)} />
+      </>
+    )
+  }
 
   return (
     <>
