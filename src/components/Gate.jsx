@@ -36,7 +36,7 @@ export function Gate({ couple, onAdmit }) {
         <h1 className="title gate-question">Are you sure you are my girlfriend?</h1>
         <p className="subtitle gate-copy">
           {denied
-            ? `Hmm. This honey is only for ${couple.herName}. Try again if that is you.`
+            ? `Hmm. This honey is only for Min Khant's Girlfriend. Try again if that is you.`
             : 'Only she gets to buzz around in here.'}
         </p>
         <div className="actions">
