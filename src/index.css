@@ -1,20 +1,11 @@
 :root {
-  --cream: #fff8ee;
-  --cream-deep: #f4e2c4;
-  --honey: #f0b429;
-  --honey-deep: #d4920e;
-  --blush: #ffd0d0;
-  --rose: #e56b7d;
-  --petal: #ff8fa3;
-  --sage: #8fbf88;
-  --sky: #c5e6f5;
-  --ink: #5a3d32;
-  --ink-soft: #8a6a5c;
-  --white: #fffdf8;
-  --shadow: 0 18px 50px rgba(90, 61, 50, 0.16);
-  font-family: Nunito, system-ui, sans-serif;
-  color: var(--ink);
-  background: var(--cream);
+  --void: #050203;
+  --blood: #c41e1e;
+  --dried: #6b0f12;
+  --ash: #d8c4b4;
+  font-family: 'IM Fell English', Georgia, serif;
+  color: var(--ash);
+  background: var(--void);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -32,27 +23,15 @@ body,
   margin: 0;
   min-height: 100%;
   min-height: 100dvh;
+  background: #050203;
 }
 
 body {
   overflow: auto;
-}
-
-button,
-input {
-  font: inherit;
-}
-
-button {
-  cursor: pointer;
-}
-
-img {
-  max-width: 100%;
-  display: block;
+  cursor: default;
 }
 
 :focus-visible {
-  outline: 3px solid var(--honey);
+  outline: 2px solid #7a080c;
   outline-offset: 3px;
 }
